@@ -21,5 +21,7 @@ then
 fi
 
 useradd -mv -b /home/$NAME -d /home/$NAME $NAME
+git init --bare /home/$NAME/$NAME.repo
+chown -R $NAME /home/$NAME/*
 mkdir /var/www/htdocs/$NAME
 chown -R $NAME /var/www/htdocs/$NAME
